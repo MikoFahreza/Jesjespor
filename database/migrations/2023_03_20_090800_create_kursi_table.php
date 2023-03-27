@@ -14,7 +14,7 @@ return new class extends Migration
     $table->increments('id_kursi');
     $table->unsignedInteger('id_gerbong');
     $table->foreign('id_gerbong')->references('id_gerbong')->on('gerbong')->onDelete('cascade');
-    $table->varchar('nama_kursi');
+    $table->string('nama_kursi');
  });
  }
  /**

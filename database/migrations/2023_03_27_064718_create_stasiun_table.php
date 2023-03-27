@@ -12,11 +12,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('boarding_pass', function (Blueprint $table) {
-            $table->increments('id_Boarding');
-            $table->unsignedInteger('invoice');
-            $table->foreign('invoice')->references('invoice')->on('transaksi')->onDelete('cascade');
-            $table->timestamps();
+        Schema::create('stasiun', function (Blueprint $table) {
+            $table->increments('id_stasiun');
+            $table->string('nama_stasiun');
+          
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boarding_pass');
+        Schema::dropIfExists('stasiun');
     }
 };

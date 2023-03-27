@@ -6,9 +6,9 @@ return new class extends Migration
 {
  /**
  * Run the migrations.
- *
+ *@return void
  */
- public function up():void
+ public function up()
  {
  Schema::create('transaksi', function (Blueprint $table) {
     $table->increments('invoice');
@@ -26,7 +26,7 @@ return new class extends Migration
  *
  * @return void
  */
- public function down(): void
+ public function down()
  {
  Schema::dropIfExists('kursi');
  }

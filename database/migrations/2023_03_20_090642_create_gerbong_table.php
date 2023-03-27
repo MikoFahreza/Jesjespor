@@ -12,7 +12,7 @@ return new class extends Migration
  {
  Schema::create('gerbong', function (Blueprint $table) {
     $table->increments('id_gerbong');
-    $table->varchar('nama_gerbong');
+    $table->string('nama_gerbong');
  });
  }
  /**
