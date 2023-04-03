@@ -12,6 +12,8 @@
    {
    Schema::create('gerbong', function (Blueprint $table) {
       $table->increments('id_gerbong');
+      $table->unsignedInteger('id_kereta');
+      $table->foreign('id_kereta')->references('id_kereta')->on('kereta')->onDelete('cascade');
       $table->string('nama_gerbong');
    });
    }
