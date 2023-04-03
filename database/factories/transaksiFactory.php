@@ -1,23 +1,24 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\Jadwal;
-use App\Models\MetodePembayaran;
-use App\Models\User;
-use App\Models\Transaksi;
-use Illuminate\Database\Eloquent\Factories\Factory;
+
+use Database\Seeders\jadwalSeeder;
+use App\Models\metode_pembayaran;
+use App\Models\jadwal;
+use App\Models\user;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Penjualan>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\transaksi>
  */
-class PenjualanFactory extends Factory
+class TransaksiFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'id_jadwal' => Jadwal::inRandomOrder()->first()->id_jadwal,
