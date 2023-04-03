@@ -29,7 +29,7 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     * @return voidC
+     * @return void
      */
     public function down()
     {
